@@ -1,3 +1,7 @@
+package src.main.java.com.ash.remotedictserver.server.cache.manager;
+
+import src.main.java.com.ash.remotedictserver.server.cache.store.CacheStore;
+
 public class CacheManager {
 
     private CacheStore cacheStore = new CacheStore();

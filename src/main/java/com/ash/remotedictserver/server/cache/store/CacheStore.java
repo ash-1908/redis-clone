@@ -1,3 +1,5 @@
+package src.main.java.com.ash.remotedictserver.server.cache.store;
+
 import java.util.HashMap;
 
 public class CacheStore {

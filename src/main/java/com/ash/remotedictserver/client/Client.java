@@ -7,7 +7,7 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class Client {
-    public static void main(String[] args) {
+    static void main(String[] args) {
 
         String hostName = "127.0.0.1";
 
@@ -24,14 +24,14 @@ public class Client {
             String fromServer, fromClient;
 
             while ((fromClient = stdIn.nextLine()) != null) {
-                if (fromClient.equals("Bye."))
+                if (fromClient.equals("quit"))
                     break;
 
                 out.println(fromClient);
 
                 fromServer = in.readLine();
 
-                System.out.println("Server: " + fromServer);
+                System.out.println(fromServer);
             }
 
         } catch (Exception e) {

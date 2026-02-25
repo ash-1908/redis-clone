@@ -15,29 +15,27 @@ public class CacheHandler {
     }
 
     private void validateCommand(String[] command) {
-        if(Objects.isNull(command[0])) {
+        if (Objects.isNull(command[0])) {
             // throw invalid command
         }
 
-        if(command[0].toLowerCase().equals("get")) {
-                if(command.length != 2) {
-                    // throw invalid command
-                }
-        } else
-
-        if(command[0].toLowerCase().equals("set")) {
-                if(command.length != 3) {
-                    // throw invalid command
-                }
+        if (command[0].toLowerCase().equals("get")) {
+            if (command.length != 2) {
+                // throw invalid command
+            }
+        } else if (command[0].toLowerCase().equals("set")) {
+            if (command.length != 3) {
+                // throw invalid command
+            }
         }
     }
 
     private String executeCommand(String[] command) {
-        switch(command[0].toLowerCase()) {
+        switch (command[0].toLowerCase()) {
             case "get":
 
                 return cacheManager.getKeyValue(command[1]);
-            
+
             case "set":
 
                 return cacheManager.setKeyValue(command[1], command[2]);
